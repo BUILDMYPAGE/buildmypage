@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Brand palette — sampled from the BUILDMYPAGE logo:
+     steel blue #2d84b6, swoosh orange #d0622e, olive-gray #606050 */
+  --color-brand-50: #f2f8fb;
+  --color-brand-100: #e0eef6;
+  --color-brand-200: #c2ddec;
+  --color-brand-300: #93c3dd;
+  --color-brand-400: #5ba3c9;
+  --color-brand-500: #3a8fbc;
+  --color-brand-600: #2d84b6;
+  --color-brand-700: #266f9a;
+  --color-brand-800: #225d80;
+  --color-brand-900: #1f4d69;
+  --color-accent-500: #d0622e;
+  --color-accent-600: #b95322;
+  --color-ink-900: #14212b;
+  --color-ink-700: #3c4a52;
+  --color-ink-500: #667680;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
