@@ -27,7 +27,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -53,7 +53,7 @@ export default function Header() {
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="rounded-md p-2 text-ink-700 md:hidden"
+          className="rounded-md p-2 text-ink-700 lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -67,7 +67,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-ink-900/10 bg-white px-4 pb-4 pt-2 md:hidden">
+        <nav className="border-t border-ink-900/10 bg-white px-4 pb-4 pt-2 lg:hidden">
           {nav.map((item) => (
             <Link
               key={item.href}

@@ -1,9 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
-import { hero, process, services, site, testimonials } from "@/lib/content";
+import { ai, hero, process, projects, services, site, stats, testimonials } from "@/lib/content";
 
 const featuredTestimonial =
   testimonials.find((t) => t.featured) ?? testimonials[0];
+
+const featuredProjects = projects.filter((p) => p.featured).slice(0, 3);
 
 export default function Home() {
   return (
@@ -33,6 +36,20 @@ export default function Home() {
             </Link>
           </div>
           <p className="mt-10 text-sm italic text-ink-500">“{site.tagline}”</p>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="border-b border-ink-900/10 bg-white">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 py-12 sm:px-6 lg:grid-cols-4">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="text-3xl font-bold tracking-tight text-brand-600 sm:text-4xl">
+                {s.value}
+              </p>
+              <p className="mt-1 text-sm text-ink-500">{s.label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -71,6 +88,77 @@ export default function Home() {
         >
           All services →
         </Link>
+      </section>
+
+      {/* Featured work */}
+      <section className="border-t border-ink-900/10 bg-brand-50/50">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-ink-900">
+                Recent work
+              </h2>
+              <p className="mt-2 max-w-xl text-ink-500">
+                Federal dashboards, business platforms, and mobile apps — designed, built,
+                and shipped by our team.
+              </p>
+            </div>
+            <Link
+              href="/work"
+              className="hidden shrink-0 text-sm font-semibold text-brand-600 hover:text-brand-700 sm:block"
+            >
+              All work →
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.map((p) => (
+              <Link
+                key={p.name}
+                href="/work"
+                className="group overflow-hidden rounded-xl border border-ink-900/10 bg-white shadow-sm"
+              >
+                <Image
+                  src={p.image}
+                  alt={`Screenshot of ${p.name}`}
+                  width={1920}
+                  height={1200}
+                  className="aspect-[8/5] w-full border-b border-ink-900/10 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-ink-900 group-hover:text-brand-700">
+                    {p.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-500">{p.blurb}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="/work"
+            className="mt-8 block text-sm font-semibold text-brand-600 hover:text-brand-700 sm:hidden"
+          >
+            All work →
+          </Link>
+        </div>
+      </section>
+
+      {/* AI */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent-600">
+            {ai.eyebrow}
+          </p>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink-900 sm:text-4xl">
+            {ai.heading}
+          </h2>
+          <p className="mt-4 text-ink-500">{ai.sub}</p>
+          <Link
+            href="/ai"
+            className="mt-6 inline-block text-sm font-semibold text-brand-600 hover:text-brand-700"
+          >
+            How we use AI →
+          </Link>
+        </div>
       </section>
 
       {/* Process */}

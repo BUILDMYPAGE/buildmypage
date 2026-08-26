@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CTA from "@/components/CTA";
 import PageHeader from "@/components/PageHeader";
-import { services, skills } from "@/lib/content";
+import { capabilities, services, skills } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -57,8 +57,40 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Professional overview */}
+      {/* Capabilities */}
       <section className="border-t border-ink-900/10 bg-brand-50/50">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <h2 className="text-3xl font-bold tracking-tight text-ink-900">Capabilities</h2>
+          <p className="mt-2 max-w-2xl text-ink-500">
+            The technologies our team works in every day, across the full stack.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((c) => (
+              <div
+                key={c.category}
+                className="rounded-xl border border-ink-900/10 bg-white p-6 shadow-sm"
+              >
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-accent-600">
+                  {c.category}
+                </h3>
+                <ul className="mt-3 flex flex-wrap gap-1.5">
+                  {c.items.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full bg-brand-50 px-2.5 py-0.5 text-xs font-medium text-brand-700"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Professional overview */}
+      <section className="border-t border-ink-900/10 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <h2 className="text-3xl font-bold tracking-tight text-ink-900">
             Professional Overview

@@ -3,6 +3,8 @@
  * you should rarely need to touch the page components themselves.
  *
  * Content imported from the live WordPress site (buildmypage.com) on 2026-08-24.
+ * Portfolio, AI, capabilities, and additional client engagements imported from
+ * bryanmarosch.com on 2026-08-26, rewritten from a company perspective.
  */
 
 export const site = {
@@ -25,9 +27,19 @@ export const site = {
 export const nav = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
+  { label: "AI", href: "/ai" },
   { label: "Clients", href: "/clients" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Contact", href: "/contact" },
+];
+
+/** Headline numbers shown on the homepage. */
+export const stats = [
+  { value: "15+", label: "Years of engineering experience" },
+  { value: "16", label: "Federal agencies & enterprise clients" },
+  { value: "40%", label: "Faster delivery with AI-assisted workflows" },
+  { value: "100%", label: "Of code reviewed, tested & 508-validated" },
 ];
 
 export const hero = {
@@ -164,6 +176,236 @@ export const process = [
   },
 ];
 
+export type Project = {
+  name: string;
+  kind: "Website" | "Mobile App";
+  blurb: string;
+  tags: string[];
+  image: string;
+  links: { label: string; href: string }[];
+  featured?: boolean; // shown on the homepage
+};
+
+export const projects: Project[] = [
+  {
+    name: "AnidaPro",
+    kind: "Website",
+    blurb:
+      "Company web platform we built and paired with companion native iOS and Android mobile apps.",
+    tags: ["Angular", "TypeScript", "Responsive", "PWA"],
+    image: "/screenshots/anidapro.jpg",
+    links: [{ label: "anidapro.com", href: "https://www.anidapro.com/" }],
+    featured: true,
+  },
+  {
+    name: "Century Management Consultants",
+    kind: "Website",
+    blurb:
+      "HOA and condominium management platform for South Florida — a Next.js front end backed by a headless CMS, with resident community search and an integrated AI assistant.",
+    tags: ["Next.js", "React", "Payload CMS", "Vercel"],
+    image: "/screenshots/cmcmanagement.jpg",
+    links: [{ label: "cmcmanagement.biz", href: "https://cmcmanagement.biz/" }],
+    featured: true,
+  },
+  {
+    name: "USDA FEMS Dashboard",
+    kind: "Website",
+    blurb:
+      "Fire & Environmental Mapping System dashboard for the U.S. Forest Service — our team led the UI development.",
+    tags: ["Angular", "Elasticsearch", "PostgreSQL", "AWS"],
+    image: "/screenshots/fems.jpg",
+    links: [{ label: "fems.fs2c.usda.gov", href: "https://fems.fs2c.usda.gov/" }],
+    featured: true,
+  },
+  {
+    name: "The Nation's Report Card",
+    kind: "Website",
+    blurb:
+      "U.S. Department of Education NAEP portal — we developed new sections of the site to Section 508 standards.",
+    tags: ["Angular", "TypeScript", "Section 508", "SCSS"],
+    image: "/screenshots/naep.jpg",
+    links: [
+      {
+        label: "nationsreportcard.gov",
+        href: "https://www.nationsreportcard.gov/focus_on_naep/",
+      },
+    ],
+  },
+  {
+    name: "Maintain Florida",
+    kind: "Website",
+    blurb: "Responsive marketing and services website for a Florida property-maintenance company.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Responsive"],
+    image: "/screenshots/maintainflorida.jpg",
+    links: [{ label: "maintainflorida.com", href: "https://maintainflorida.com/" }],
+  },
+  {
+    name: "Racing Florida",
+    kind: "Website",
+    blurb: "Motorsports community and events site with a dynamic, mobile-first layout.",
+    tags: ["JavaScript", "CSS3", "Responsive"],
+    image: "/screenshots/racingflorida.jpg",
+    links: [{ label: "racingflorida.net", href: "https://www.racingflorida.net/" }],
+  },
+  {
+    name: "AnidaPro Mobile",
+    kind: "Mobile App",
+    blurb: "Cross-platform mobile app we built and shipped for the AnidaPro platform.",
+    tags: ["Ionic", "TypeScript", "iOS", "Android"],
+    image: "/screenshots/anidapro-app.jpg",
+    links: [
+      { label: "App Store", href: "https://apps.apple.com/app/id6775009943" },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.anidapro.mobile",
+      },
+    ],
+  },
+  {
+    name: "FlashTree",
+    kind: "Mobile App",
+    blurb: "Mobile app delivering a fast, native experience on both major platforms.",
+    tags: ["React Native", "iOS", "Android"],
+    image: "/screenshots/flashtree-app.jpg",
+    links: [
+      { label: "App Store", href: "https://apps.apple.com/us/app/flashtree/id1591487632" },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.flashtree",
+      },
+    ],
+  },
+];
+
+/** The AI page. */
+export const ai = {
+  eyebrow: "AI Engineering",
+  heading: "AI is a force multiplier — not a substitute for engineering judgment.",
+  sub: "We put frontier AI models to work across our projects, from AI-assisted development to intelligent features in the products we ship. Every line still passes through senior engineers before it reaches you.",
+  metrics: [
+    { value: "40%", label: "Reduction in coding time through AI-assisted workflows" },
+    { value: "4+", label: "Frontier LLMs in active rotation" },
+    { value: "100%", label: "Of AI-generated code reviewed, tested, and 508-validated" },
+  ],
+  practices: [
+    {
+      title: "Human review on everything",
+      blurb:
+        "AI accelerates the work; it doesn't approve it. Every AI-generated line is reviewed by a senior engineer, covered by tests, and validated for Section 508 accessibility before it ships.",
+    },
+    {
+      title: "The right model for the job",
+      blurb:
+        "We keep several frontier models — Claude, GPT, Gemini, and GitHub Copilot — in active rotation, and match each task to the model that does it best.",
+    },
+    {
+      title: "Agentic workflows",
+      blurb:
+        "Beyond code assistance, we build agentic systems for our clients: MCP servers, retrieval-augmented generation (RAG), embeddings, and tool use that connect AI to your real data and workflows.",
+    },
+    {
+      title: "Faster delivery, same craftsmanship",
+      blurb:
+        "AI-assisted development has cut our coding time by roughly 40% — savings we pass on as faster turnarounds and more iterations, not lower standards.",
+    },
+  ],
+  toolkit: [
+    "Claude",
+    "GPT",
+    "Gemini",
+    "GitHub Copilot",
+    "Prompt engineering",
+    "Agentic workflows",
+    "MCP servers",
+    "RAG & embeddings",
+    "Tool use",
+  ],
+};
+
+/** Categorized tech stack shown on the Services page. */
+export type Capability = {
+  category: string;
+  items: string[];
+};
+
+export const capabilities: Capability[] = [
+  {
+    category: "AI & Automation",
+    items: [
+      "Claude",
+      "GPT",
+      "Gemini",
+      "GitHub Copilot",
+      "Prompt engineering",
+      "Agentic workflows",
+      "MCP servers",
+      "RAG & embeddings",
+      "Tool use",
+    ],
+  },
+  {
+    category: "Front-End",
+    items: [
+      "Angular",
+      "React",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SASS/SCSS",
+      "Vue.js",
+      "jQuery",
+      "Bootstrap",
+      "D3.js",
+      "Webpack",
+    ],
+  },
+  {
+    category: "Back-End",
+    items: [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "Django",
+      "C# / .NET Core",
+      "PHP",
+      "GraphQL",
+      "REST APIs",
+    ],
+  },
+  {
+    category: "Mobile",
+    items: ["React Native", "Ionic Cordova", "iOS", "Android", "Progressive Web Apps"],
+  },
+  {
+    category: "DevOps & Cloud",
+    items: [
+      "Git / GitHub / GitLab",
+      "Docker",
+      "Kubernetes",
+      "AWS (S3, EC2, CloudFront, Lambda)",
+      "Azure",
+      "Jenkins",
+      "CI/CD",
+    ],
+  },
+  {
+    category: "Databases",
+    items: ["SQL Server", "MySQL", "MongoDB", "PostgreSQL", "Oracle"],
+  },
+  {
+    category: "Practices & Tools",
+    items: [
+      "Agile / Scrum",
+      "Test-Driven Development",
+      "Section 508 / WCAG compliance",
+      "Jira",
+      "Figma",
+      "Adobe Creative Suite",
+    ],
+  },
+];
+
 export type Client = {
   name: string;
   industry: string;
@@ -171,6 +413,13 @@ export type Client = {
 };
 
 export const clients: Client[] = [
+  {
+    name: "TriWest Healthcare Alliance",
+    industry: "Healthcare",
+    paragraphs: [
+      "Currently delivering enterprise front-end development for TriWest Healthcare Alliance in partnership with Cognitive Medical Systems. Building Angular and Power Apps interfaces, configuring RESTful APIs with role-based payloads, and translating Figma designs into pixel-perfect Angular Material components. Also shipping companion native mobile apps — Android via Bubblewrap and Android Studio, iOS via Swift and Xcode with TestFlight archiving — with unit testing handled in Jasmine and Karma.",
+    ],
+  },
   {
     name: "United States Postal Service",
     industry: "Government",
@@ -247,6 +496,34 @@ export const clients: Client[] = [
     paragraphs: [
       "Developed UI components using Angular 2 and 4 with TypeScript, incorporating core Angular features such as components, modules, services, constructors, and directives. Converted static HTML pages into dynamic Angular web applications with data binding, filters, and reusable components. Created a global corporate theme using Angular Material Themes, leveraging @mixins and custom directives for consistent styling. Built responsive interfaces using Bootstrap and styled all elements with SASS. Utilized JavaScript observables with map operators and managed dependencies through Node Package Manager (NPM).",
       "Worked across two major Agile projects simultaneously, contributing in multiple sprints, ceremonies, and standups, while providing technical feedback and peer training. Managed tasks through Jira, updating workflows for QA and UAT, and committed code via Git repositories. Supported mobile development efforts using the Ionic framework. Designed logos and graphical assets using Adobe Photoshop CC to enhance UI branding and presentation.",
+    ],
+  },
+  {
+    name: "Activision — Call of Duty: Advanced Warfare",
+    industry: "Entertainment",
+    paragraphs: [
+      "Converted the Call of Duty: Advanced Warfare launch site into a fully responsive mobile ecosystem as lead front-end developer on the Perficient engagement. Transformed layered PSD designs into HTML5, CSS3, and Bootstrap layouts with jQuery Mobile, and optimized the site to sustain 99.9% uptime through the high-traffic global launch of one of the year's biggest game releases.",
+    ],
+  },
+  {
+    name: "Salesforce.com",
+    industry: "Technology",
+    paragraphs: [
+      "Served as lead front-end developer building UI features with Visualforce and Apex, alongside HTML5, CSS3, JavaScript, and jQuery. Participated in early Lightning Component pilots and implemented responsive layouts with CSS Flexbox across the platform.",
+    ],
+  },
+  {
+    name: "Locus Traxx, Inc.",
+    industry: "Logistics",
+    paragraphs: [
+      "Built LocusTraxx.com and its companion mobile web app on an AngularJS, jQuery, PHP, MySQL, and C#/.NET stack with SQL Server integration. Beyond development, managed a team of .NET and Linux developers and QA staff, handling everything from design through deployment for the cargo-monitoring platform.",
+    ],
+  },
+  {
+    name: "Bankrate, Inc.",
+    industry: "Financial Media",
+    paragraphs: [
+      "Led front-end development on the Interest.com redesign using HTML, CSS3, PHP, MySQL, JavaScript, and jQuery, including a WordPress migration within an ASP.NET/SQL Server environment.",
     ],
   },
 ];
