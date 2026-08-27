@@ -122,7 +122,7 @@ export const services: Service[] = [
   {
     title: "Mobile Applications",
     blurb:
-      "Have a new idea for a mobile application? We're the developers for that. Whether you've just invented the next breakthrough or simply want to bring your unique concept to life, we're ready to get started. We'll guide your project through the right steps and establish a solid foundation to launch your app across all major platforms — including iOS, Android, and Windows Mobile — quickly and efficiently.",
+      "Have a new idea for a mobile application? We're the developers for that. Whether you've just invented the next breakthrough or simply want to bring your unique concept to life, we're ready to get started. We'll guide your project through the right steps and establish a solid foundation to launch your app on both major platforms — iOS and Android — quickly and efficiently.",
   },
   {
     title: "WordPress / Plugin Development",
