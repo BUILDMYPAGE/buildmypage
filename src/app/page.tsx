@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
-import { ai, hero, process, projects, services, site, stats, testimonials } from "@/lib/content";
+import { ai, hero, oneStop, process, projects, services, site, stats, testimonials } from "@/lib/content";
 
 const featuredTestimonial =
   testimonials.find((t) => t.featured) ?? testimonials[0];
@@ -50,6 +50,31 @@ export default function Home() {
               <p className="mt-1 text-sm text-ink-500">{s.label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* One-stop shop */}
+      <section className="border-b border-ink-900/10 bg-brand-50/50">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent-600">
+              {oneStop.eyebrow}
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink-900 sm:text-4xl">
+              {oneStop.heading}
+            </h2>
+            <p className="mt-4 text-ink-500">{oneStop.sub}</p>
+            <ul className="mt-8 flex flex-wrap justify-center gap-2">
+              {oneStop.pillars.map((p) => (
+                <li
+                  key={p}
+                  className="rounded-full border border-brand-600/20 bg-white px-4 py-1.5 text-sm font-medium text-brand-700"
+                >
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 

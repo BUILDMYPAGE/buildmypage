@@ -11,7 +11,7 @@ export const site = {
   name: "BUILDMYPAGE",
   tagline: "When Preparation Meets Opportunity",
   description:
-    "BUILDMYPAGE delivers modern Angular, React, and AI-powered web solutions — trusted by federal agencies and enterprise teams alike.",
+    "BUILDMYPAGE is your full-service, one-stop shop for everything your business needs — websites, mobile apps, branding, social media, marketing, and AI — trusted by federal agencies and enterprise teams alike.",
   url: "https://www.buildmypage.com",
   email: "info@buildmypage.com",
   phone: "", // e.g. "(555) 123-4567" — leave empty to hide
@@ -41,6 +41,23 @@ export const stats = [
   { value: "40%", label: "Faster delivery with AI-assisted workflows" },
   { value: "100%", label: "Of code reviewed, tested & 508-validated" },
 ];
+
+/** Full-service positioning highlighted on the homepage. */
+export const oneStop = {
+  eyebrow: "Full service",
+  heading: "Your one-stop shop, from start to finish.",
+  sub: "BUILDMYPAGE handles everything your business needs to thrive online — one team, one point of contact, from the first idea to launch and beyond. No juggling agencies, no handoffs, no gaps.",
+  pillars: [
+    "Websites & Web Apps",
+    "Mobile Apps",
+    "Branding & Design",
+    "Social Media",
+    "Marketing & SEO",
+    "E-Commerce",
+    "AI Solutions",
+    "Hosting & Support",
+  ],
+};
 
 export const hero = {
   eyebrow: "Web development, done right",

@@ -6,7 +6,7 @@ import { capabilities, services, skills } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Angular, React, and AI development, responsive design, SEO, e-commerce, mobile apps, and more — everything your project needs under one roof.",
+    "Websites, mobile apps, branding, social media, marketing, and AI — BUILDMYPAGE is a full-service, one-stop shop for all your business needs, from start to finish.",
 };
 
 export default function ServicesPage() {
@@ -15,7 +15,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="Services"
         heading="Everything your project needs, under one roof."
-        sub="From modern front-end frameworks to AI, SEO, and e-commerce — pick what you need now, and add more as you grow."
+        sub="BUILDMYPAGE is a full-service, one-stop shop for all your business needs — websites, mobile apps, branding, social media, marketing, and AI — handled by one team from start to finish. Pick what you need now, and add more as you grow."
       />
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
