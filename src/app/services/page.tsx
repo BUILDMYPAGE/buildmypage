@@ -98,9 +98,12 @@ export default function ServicesPage() {
           <p className="mt-2 max-w-2xl text-ink-500">
             A snapshot of the tools, frameworks, and practices behind the work.
           </p>
-          <ul className="mt-8 grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
+          <ul className="mt-8 sm:columns-2 sm:gap-x-8">
             {skills.map((skill) => (
-              <li key={skill} className="flex items-start gap-2.5 text-sm text-ink-700">
+              <li
+                key={skill}
+                className="mb-2.5 flex break-inside-avoid items-start gap-2.5 text-sm text-ink-700"
+              >
                 <svg
                   width="16"
                   height="16"
