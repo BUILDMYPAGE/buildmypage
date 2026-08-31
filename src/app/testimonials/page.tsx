@@ -6,6 +6,7 @@ import { testimonials } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Testimonials",
   description: "What clients say about working with BUILDMYPAGE.",
+  alternates: { canonical: "/testimonials/" },
 };
 
 export default function TestimonialsPage() {

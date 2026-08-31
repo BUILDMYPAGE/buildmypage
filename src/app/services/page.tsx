@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Websites, mobile apps, branding, social media, marketing, and AI — BUILDMYPAGE is a full-service, one-stop shop for all your business needs, from start to finish.",
+  alternates: { canonical: "/services/" },
 };
 
 export default function ServicesPage() {

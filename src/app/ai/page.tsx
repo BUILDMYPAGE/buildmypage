@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "AI Engineering",
   description:
     "How we use AI: frontier LLMs, agentic workflows, MCP servers, and RAG — with every line of AI-generated code reviewed, tested, and 508-validated by senior engineers.",
+  alternates: { canonical: "/ai/" },
 };
 
 export default function AIPage() {

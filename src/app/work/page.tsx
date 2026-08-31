@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Work",
   description:
     "A look at our recent work — government dashboards, business platforms, and native mobile apps, from AnidaPro and the USDA FEMS dashboard to The Nation's Report Card.",
+  alternates: { canonical: "/work/" },
 };
 
 const websites = projects.filter((p) => p.kind === "Website");

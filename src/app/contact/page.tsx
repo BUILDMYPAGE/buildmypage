@@ -6,6 +6,7 @@ import { contact, site } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Tell us about your project — we'll get back to you within one business day.",
+  alternates: { canonical: "/contact/" },
 };
 
 export default function ContactPage() {

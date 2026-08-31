@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Clients",
   description:
     "Project work for USPS, the Departments of Education, Agriculture, and Homeland Security, Lockheed Martin, General Dynamics, Halliburton, and more.",
+  alternates: { canonical: "/clients/" },
 };
 
 export default function ClientsPage() {

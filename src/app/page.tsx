@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
 import { ai, hero, oneStop, process, projects, services, site, stats, testimonials } from "@/lib/content";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const featuredTestimonial =
   testimonials.find((t) => t.featured) ?? testimonials[0];
