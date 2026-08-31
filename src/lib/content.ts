@@ -292,6 +292,21 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    name: "Okeeheelee BMX",
+    kind: "Mobile App",
+    blurb:
+      "Race-day companion app we built for the Okeeheelee BMX track in South Florida — race schedules, in-app rider registration, live motoboard updates with push notifications, and season leaderboards.",
+    tags: ["React Native", "Expo", "iOS", "Android"],
+    image: "/screenshots/okeeheelee-app.jpg",
+    links: [
+      { label: "App Store", href: "https://apps.apple.com/us/app/okeeheelee-bmx/id6802395535" },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.okeeheeleebmx.app",
+      },
+    ],
+  },
 ];
 
 /** The AI page. */
