@@ -60,7 +60,7 @@ export const oneStop = {
 };
 
 export const hero = {
-  eyebrow: "Web development, done right",
+  eyebrow: site.tagline,
   heading: "Modern web applications, hand-coded and built to last.",
   sub: "From Angular and React front-ends to AI-powered solutions, BUILDMYPAGE delivers the craftsmanship trusted by federal agencies, Fortune 500 teams, and growing businesses alike.",
   primaryCta: { label: "Start a project", href: "/contact" },

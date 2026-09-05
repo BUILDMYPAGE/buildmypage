@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
-import { ai, hero, oneStop, process, projects, services, site, stats, testimonials } from "@/lib/content";
+import { ai, hero, oneStop, process, projects, services, stats, testimonials } from "@/lib/content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -40,7 +40,6 @@ export default function Home() {
               {hero.secondaryCta.label}
             </Link>
           </div>
-          <p className="mt-10 text-sm italic text-ink-500">“{site.tagline}”</p>
         </div>
       </section>
 
