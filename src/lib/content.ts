@@ -442,6 +442,7 @@ export type Client = {
   name: string;
   industry: string;
   paragraphs: string[];
+  links?: { label: string; href: string }[];
 };
 
 export const clients: Client[] = [
@@ -450,6 +451,21 @@ export const clients: Client[] = [
     industry: "Healthcare",
     paragraphs: [
       "Currently delivering enterprise front-end development for TriWest Healthcare Alliance in partnership with Cognitive Medical Systems. Building Angular and Power Apps interfaces, configuring RESTful APIs with role-based payloads, and translating Figma designs into pixel-perfect Angular Material components. Also shipping companion native mobile apps — Android via Bubblewrap and Android Studio, iOS via Swift and Xcode with TestFlight archiving — with unit testing handled in Jasmine and Karma.",
+    ],
+  },
+  {
+    name: "Okeeheelee BMX",
+    industry: "Community Sports",
+    paragraphs: [
+      "Designed, built, and shipped the official race-day app for Okeeheelee BMX, a USA BMX sanctioned track in West Palm Beach, Florida. Riders and families get the season race schedule, in-app registration and checkout for every rider in the household in a single cart, a live motoboard that mirrors the official USA BMX staging board moto by moto, race results, practice lap times, and season leaderboards — with push notifications the moment the board goes live, the motos change, or a race night gets rained out.",
+      "The app was donated. Okeeheelee BMX is a volunteer-run track in a Palm Beach County park, so we built it, published it, and continue to maintain it at no cost — App Store and Google Play listings, backend, and the updates that land before each race night included. Built with React Native and Expo for iOS and Android, backed by Cloudflare Workers, D1, and KV, with registration and payments flowing through the track's existing WooCommerce store.",
+    ],
+    links: [
+      { label: "App Store", href: "https://apps.apple.com/us/app/okeeheelee-bmx/id6802395535" },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.okeeheeleebmx.app",
+      },
     ],
   },
   {

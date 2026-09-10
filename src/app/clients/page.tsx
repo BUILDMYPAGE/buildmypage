@@ -34,6 +34,21 @@ export default function ClientsPage() {
                   {p}
                 </p>
               ))}
+              {c.links && (
+                <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
+                  {c.links.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-brand-600 hover:text-brand-700"
+                    >
+                      {link.label} ↗
+                    </a>
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>
