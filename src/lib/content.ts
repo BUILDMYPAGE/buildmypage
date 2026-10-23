@@ -205,6 +205,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "BMX Motos",
+    kind: "Website",
+    blurb:
+      "Our own product for BMX racing families — live moto boards, race days, results, and points for nearly 300 tracks across the US and Canada, free in any browser with nothing to install.",
+    tags: ["React Native Web", "Expo", "Cloudflare", "PWA"],
+    image: "/screenshots/bmxmotos.jpg",
+    links: [
+      { label: "bmxmotos.net", href: "https://bmxmotos.net/" },
+      { label: "Web App", href: "https://app.bmxmotos.net/" },
+    ],
+    featured: true,
+  },
+  {
     name: "AnidaPro",
     kind: "Website",
     blurb:
@@ -222,7 +235,6 @@ export const projects: Project[] = [
     tags: ["Next.js", "React", "Payload CMS", "Vercel"],
     image: "/screenshots/cmcmanagement.jpg",
     links: [{ label: "cmcmanagement.biz", href: "https://cmcmanagement.biz/" }],
-    featured: true,
   },
   {
     name: "USDA FEMS Dashboard",
@@ -266,14 +278,17 @@ export const projects: Project[] = [
   },
   {
     name: "BMX Motos",
-    kind: "Website",
+    kind: "Mobile App",
     blurb:
-      "Our own product for BMX racing families — live moto boards, race days, results, and points for nearly 300 tracks across the US and Canada, free in any browser with nothing to install.",
-    tags: ["React Native Web", "Expo", "Cloudflare", "PWA"],
-    image: "/screenshots/bmxmotos.jpg",
+      "Race night in your pocket for nearly 300 BMX tracks — live moto boards with your riders starred, push alerts when racing goes live, race days, results, and national to district points.",
+    tags: ["React Native", "Expo", "iOS", "Android"],
+    image: "/screenshots/bmxmotos-app.jpg",
     links: [
-      { label: "bmxmotos.net", href: "https://bmxmotos.net/" },
-      { label: "Web App", href: "https://app.bmxmotos.net/" },
+      { label: "App Store", href: "https://apps.apple.com/us/app/bmx-motos/id6816524298" },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.buildmypage.bmxmotos",
+      },
     ],
   },
   {
@@ -316,21 +331,6 @@ export const projects: Project[] = [
       {
         label: "Google Play",
         href: "https://play.google.com/store/apps/details?id=com.okeeheeleebmx.app",
-      },
-    ],
-  },
-  {
-    name: "BMX Motos",
-    kind: "Mobile App",
-    blurb:
-      "Race night in your pocket for nearly 300 BMX tracks — live moto boards with your riders starred, push alerts when racing goes live, race days, results, and national to district points.",
-    tags: ["React Native", "Expo", "iOS", "Android"],
-    image: "/screenshots/bmxmotos-app.jpg",
-    links: [
-      { label: "App Store", href: "https://apps.apple.com/us/app/bmx-motos/id6816524298" },
-      {
-        label: "Google Play",
-        href: "https://play.google.com/store/apps/details?id=com.buildmypage.bmxmotos",
       },
     ],
   },
