@@ -6,7 +6,7 @@ import { clients } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Clients",
   description:
-    "Project work for USPS, the Departments of Education, Agriculture, and Homeland Security, Lockheed Martin, General Dynamics, Halliburton, and more.",
+    "Project work for HealthEdge, TriWest Healthcare Alliance, USPS, the Departments of Education, Agriculture, and Homeland Security, Lockheed Martin, General Dynamics, Halliburton, and more.",
   alternates: { canonical: "/clients/" },
 };
 
