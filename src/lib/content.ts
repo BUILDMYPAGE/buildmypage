@@ -554,6 +554,23 @@ export const clients: Client[] = [
     ],
   },
   {
+    name: "BMX Motos",
+    industry: "Community Sports",
+    paragraphs: [
+      "Designed, built, and launched BMX Motos, our own product for BMX racing families. It covers nearly 300 USA BMX tracks across the US and Canada with live moto boards, race days, results, and national to district points, and families can star their riders to follow them through each moto. Push alerts go out the moment racing goes live.",
+      "BMX Motos runs free in any browser as an installable PWA, with native iOS and Android apps on the App Store and Google Play. It's built with React Native, React Native Web, and Expo from a single codebase, backed by Cloudflare.",
+    ],
+    links: [
+      { label: "bmxmotos.net", href: "https://bmxmotos.net/" },
+      { label: "Web App", href: "https://app.bmxmotos.net/" },
+      { label: "App Store", href: "https://apps.apple.com/us/app/bmx-motos/id6816524298" },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.buildmypage.bmxmotos",
+      },
+    ],
+  },
+  {
     name: "Okeeheelee BMX",
     industry: "Community Sports",
     paragraphs: [
