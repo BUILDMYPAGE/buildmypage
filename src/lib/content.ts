@@ -557,8 +557,8 @@ export const clients: Client[] = [
     name: "BMX Motos",
     industry: "Community Sports",
     paragraphs: [
-      "Designed, built, and launched BMX Motos, our own product for BMX racing families. It covers nearly 300 USA BMX tracks across the US and Canada with live moto boards, race days, results, and national to district points, and families can star their riders to follow them through each moto. Push alerts go out the moment racing goes live.",
-      "BMX Motos runs free in any browser as an installable PWA, with native iOS and Android apps on the App Store and Google Play. It's built with React Native, React Native Web, and Expo from a single codebase, backed by Cloudflare.",
+      "Designed, built, and launched BMX Motos, our own product for BMX racing families. It covers nearly 300 tracks across the US and Canada with live moto boards, race days, results, and points standings, and families can star their riders to follow them through each moto. Push alerts go out the moment racing goes live.",
+      "BMX Motos is free to use in any browser with nothing to install, and is also available on the App Store and Google Play.",
     ],
     links: [
       { label: "bmxmotos.net", href: "https://bmxmotos.net/" },
@@ -574,8 +574,8 @@ export const clients: Client[] = [
     name: "Okeeheelee BMX",
     industry: "Community Sports",
     paragraphs: [
-      "Designed, built, and shipped the official race-day app for Okeeheelee BMX, a USA BMX sanctioned track in West Palm Beach, Florida. Riders and families get the season race schedule, in-app registration and checkout for every rider in the household in a single cart, a live motoboard that mirrors the official USA BMX staging board moto by moto, race results, practice lap times, and season leaderboards — with push notifications the moment the board goes live, the motos change, or a race night gets rained out.",
-      "The app was donated. Okeeheelee BMX is a volunteer-run track in a Palm Beach County park, so we built it, published it, and continue to maintain it at no cost — App Store and Google Play listings, backend, and the updates that land before each race night included. Built with React Native and Expo for iOS and Android, backed by Cloudflare Workers, D1, and KV, with registration and payments flowing through the track's existing WooCommerce store.",
+      "Designed, built, and shipped the official race-day app for Okeeheelee BMX, a USA BMX sanctioned track in West Palm Beach, Florida. Riders and families get the season race schedule, in-app registration and checkout for every rider in the household in a single cart, a live motoboard that follows racing moto by moto, race results, practice lap times, and season leaderboards — with push notifications the moment the board goes live, the motos change, or a race night gets rained out.",
+      "The app was donated. Okeeheelee BMX is a volunteer-run track in a Palm Beach County park, so we built it, published it, and continue to maintain it at no cost — App Store and Google Play listings, backend, and the updates that land before each race night included.",
     ],
     links: [
       { label: "App Store", href: "https://apps.apple.com/us/app/okeeheelee-bmx/id6802395535" },
